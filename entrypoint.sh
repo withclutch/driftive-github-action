@@ -66,4 +66,7 @@ if [ -n "$EXIT_CODE" ]; then
   driftive_args="$driftive_args --exit-code=${EXIT_CODE:-false}"
 fi
 
+export TG_PROVIDER_CACHE=1
+export TF_IN_AUTOMATION=1
+
 driftive $driftive_args
