@@ -51,6 +51,7 @@ fi
 
 if [ -n "$GITHUB_TOKEN" ]; then
   driftive_args="$driftive_args --github-token=$GITHUB_TOKEN"
+  git config --global url."https://${GITHUB_TOKEN}@github.com".insteadOf https://github.com
 fi
 
 if [ -n "$LOG_LEVEL" ]; then
